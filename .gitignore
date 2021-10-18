@@ -29,3 +29,4 @@ yarn.error
 
 test-report.xml
 .yarnclean
+.env
