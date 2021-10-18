@@ -1,0 +1,1 @@
+# instrail-admin-frontend
