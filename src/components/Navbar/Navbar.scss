@@ -1,0 +1,133 @@
+%nav-dropdown-text {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: #3a434b;
+  cursor: pointer;
+}
+.arrow-up {
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 1px solid #d7dce0;
+  background-color: $white;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 3rem;
+  top: -1rem;
+  border-right: none;
+  border-bottom: none;
+}
+nav {
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 0;
+  position: sticky;
+  top: 0;
+  background: $white;
+  z-index: 5;
+  &::after {
+    content: "";
+    height: 1px;
+    width: 41.1rem;
+    background-color: rgba(0, 0, 0, 0.06);
+    position: absolute;
+    left: -2rem;
+    right: 0;
+    top: 6rem;
+  }
+  @include mq(md) {
+    justify-content: flex-end;
+    &::after {
+      display: none;
+    }
+  }
+  .hamburger-wrapper {
+    display: flex;
+    align-items: center;
+    @include mq(md) {
+      position: relative;
+      display: none;
+    }
+    label {
+      display: flex;
+      align-items: center;
+    }
+    svg {
+      margin-right: 2.8rem;
+      cursor: pointer;
+    }
+    .dashboard-title {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      font-weight: 500;
+    }
+  }
+
+  .profile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .triangle-icon {
+      margin-left: 1.2rem;
+    }
+    img {
+      margin-right: 1.1rem;
+      cursor: pointer;
+    }
+    label {
+      display: flex;
+      align-items: center;
+    }
+    .nav-dropdown {
+      display: none;
+      background: #ffffff;
+      width: 12.4rem;
+      height: 8.8rem;
+      border: 1px solid #d7dce0;
+      box-shadow: 0 7.52055px 16.7123px rgba(171, 180, 189, 0.23);
+      border-radius: 4px;
+      position: absolute;
+      top: 5rem;
+      right: 0;
+      &-content {
+        display: flex;
+        align-items: center;
+        height: 4rem;
+        background-color: transparent;
+        padding-left: 1.7rem;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+        @extend %nav-dropdown-text;
+        svg {
+          margin-right: 1.2rem;
+        }
+        &:hover {
+          background-color: #f4f5f6;
+          + .arrow-up {
+            background-color: #f4f5f6;
+          }
+        }
+      }
+    }
+  }
+  input {
+    display: none;
+  }
+  #hamburger:checked ~ #nav-menu {
+    display: block;
+    position: absolute;
+    width: 20rem;
+    top: 2.5rem;
+  }
+
+  #arrow:checked ~ #hidden-nav {
+    display: block;
+  }
+}
+.avatar {
+  width: 3.4rem;
+}

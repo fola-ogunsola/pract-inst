@@ -1,0 +1,54 @@
+%pagination-typography {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: $dark-grey;
+}
+.pagination {
+  padding: 0.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include mq(md) {
+    padding: 0.8rem 1.6;
+  }
+  &__details {
+    @extend %pagination-typography;
+    span {
+      color: $dark;
+    }
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    &.first {
+      display: none;
+      @include mq(md) {
+        display: flex;
+      }
+    }
+  }
+  &__button {
+    @extend %pagination-typography;
+    padding: 0 0.8rem;
+    border-radius: 0.2rem;
+    border: none;
+    margin: 0;
+    background: transparent;
+    @include mq(md) {
+      padding: 0 0.8rem;
+    }
+    @include on-event {
+      outline: 1px dashed $dark;
+    }
+    &:first-of-type {
+      margin-left: 0;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &.active {
+      background: #DFEAF9;
+      color: $dark;
+    }
+  }
+}

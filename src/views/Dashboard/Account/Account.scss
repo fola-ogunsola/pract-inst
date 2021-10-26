@@ -1,0 +1,68 @@
+.account {
+    margin: 0 0 10rem 0;
+  &-profile-picture {
+    display: flex;
+    align-items: center;
+      position: relative;
+    .image-btn {
+      border-bottom: 1px solid $blue;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      background-color: $transparent;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      color: $blue;
+      margin-left: 3.4rem;
+      padding: 0.4rem;
+      cursor: pointer;
+    }
+    #image-upload{
+      position: absolute;
+      cursor: pointer;
+      left: 0;
+      opacity: 0;
+      z-index: 4;
+      height: 10rem;
+      top: -3.6rem;
+    }
+  }
+  &-form {
+    margin: 3.2rem 0 4rem 0;
+    #form_block {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    &-buttons {
+      display: flex;
+      justify-content: center;
+      .cancel-btn {
+        color: $dark-grey;
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-right: 1.6rem;
+        display: none;
+      }
+    }
+  }
+  @include mq(md) {
+    &-form {
+      max-width: 82rem;
+      #form_block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+    }
+      &-buttons {
+        justify-content: flex-end;
+        .save-changes-btn {
+          max-width: 20rem;
+        }
+        .cancel-btn {
+            display: flex;
+        }
+      }
+    }
+  }
+}
