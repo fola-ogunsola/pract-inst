@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: Inter, Helvetica, Arial, sans-serif !default;
+
+/// Colors
+/// @type Color
+$dark: #0b2253 !default;
+$dark-blue: #0e347e !default;
+$blue: #1f6aec !default;
+$grey: #f7f9fb !default;
+$orange: #d66f0f !default;
+$light-orange: #fdf2e7 !default;
+$info: #3793fc !default;
+$light-green: #eafbf1 !default;
+$green: #1aa551 !default;
+$red: #ca1b1b !default;
+$light-red: #fae7e7 !default;
+$white: #ffffff;
+$transparent: transparent;
+$light-grey: #eaedf4;
+$light-sky-blue: #f3f8fc;
+$dark-grey: #6d7a98;
+$darker-blue: #0E347E;
+
+$colors: (
+  dark: $dark,
+  blue: $blue,
+  dark-blue: $dark-blue,
+  grey: $grey,
+  orange: $orange,
+  light-orange: $light-orange,
+  info: $info,
+  light-green: $light-green,
+  green: $green,
+  white: $white,
+  transparent: $transparent,
+  red: $red,
+  light-red: $light-red,
+  light-grey: $light-grey,
+  light-sky-blue: $light-sky-blue,
+  dark-grey: $dark-grey,
+  darker-blue: $dark-blue
+);
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1300px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  "sm": 320px,
+  "md": 767px,
+  "lg": 1080px,
+) !default;

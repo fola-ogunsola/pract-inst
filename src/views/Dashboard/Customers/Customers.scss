@@ -1,0 +1,52 @@
+.customers {
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-search {
+      display: flex;
+      position: relative;
+      .filter-btn {
+        width: 9rem;
+        height: 4rem;
+        border: 1px solid #dde5ee;
+        border-radius: 0.4rem;
+        padding: 1.2rem 1.6rem;
+        background-color: $transparent;
+        margin-left: 1.6rem;
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        letter-spacing: 0.4px;
+        color: #3a434b;
+        span {
+          margin-left: 0.9rem;
+        }
+      }
+    }
+    &-heading {
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 2.24rem;
+      letter-spacing: 0.025rem;
+      color: $dark;
+    }
+  }
+  .create-btn {
+    z-index: 0;
+    align-items: center;
+    @include on-event {
+      svg {
+        fill: $blue;
+      }
+    }
+    svg {
+      height: 2.4rem;
+      width: 1.4rem;
+      fill: $white;
+      margin-right: 0.8rem;
+    }
+  }
+}

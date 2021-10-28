@@ -1,0 +1,42 @@
+.admin-auth {
+  background-color: $white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &::after {
+    content: url(../../assets/images/background-pattern.svg);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+
+  }
+  &-background-image {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+  &-content {
+    width: 43rem;
+    padding: 1rem;
+    z-index: 3;
+    &-title {
+      font-weight: 500;
+      font-size: 3.2rem;
+      line-height: 3.2rem;
+      color: $dark;
+      margin: 3.2rem 0 0.8rem 0;
+    }
+    &-subtitle {
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+      color: $dark-grey;
+      margin-bottom: 3.2rem;
+    }
+  }
+}
+
+

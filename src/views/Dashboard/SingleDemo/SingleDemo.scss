@@ -1,0 +1,100 @@
+%email-grey-text {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #9da9b3;
+}
+.dashboard__title{
+  .arrow-btn {
+    border: none;
+    background-color: $transparent;
+    margin-right: 3.3rem;
+  }
+}
+  .single-demo-content {
+  border: 1px solid #eaedf4;
+  border-radius: 0.8rem;
+  margin-bottom: 10rem;
+  padding: 2.4rem 2.4rem 7.2rem 2.4rem;
+  
+  &-subject {
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    color: $dark;
+    letter-spacing: 0.025rem;
+    margin: 0 0 2.4rem 4.8rem;
+  }
+  &-profile-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eaedf4;
+    padding-bottom: 1.6rem;
+    &-date {
+      p {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        color: $dark;
+      }
+    }
+    &-header {
+      display: flex;
+      .profile-details {
+        margin-left: 1.6rem;
+        .name {
+          font-weight: 600;
+          font-size: 1.6rem;
+          line-height: 1.6rem;
+          letter-spacing: 0.025rem;
+          color: $dark;
+          margin-bottom: 0.8rem;
+        }
+        .demo-email {
+          @extend %email-grey-text;
+          margin-left: 1.2rem;
+        }
+        .email-receiver {
+          @extend %email-grey-text;
+        }
+      }
+    }
+  }
+  &-message-content {
+    max-width: 77rem;
+    margin: 3rem 0 4.2rem 4.8rem;
+    padding-bottom: 1rem;
+    .message-text {
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+      color: $dark;
+    }
+  }
+  &-reply-links {
+    display: flex;
+    margin-left: 4.8rem;
+    p {
+      display: flex;
+      a {
+        width: 12.2rem;
+        height: 4rem;
+        background: #f7f9fb;
+        border-radius: 0.4rem;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.2px;
+        color: #0d0f11;
+        padding-left: 1.5rem;
+        margin-right: 1.8rem;
+        svg {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}

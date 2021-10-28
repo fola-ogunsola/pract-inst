@@ -1,0 +1,56 @@
+.sidebar {
+  &-content {
+    @include mq(md) {
+      width: 25rem;
+      height: 100vh;
+      background-color:  #F5FAFF;
+      padding: 2.2rem 1.6rem;
+    }
+    .sidebar-logo {
+      @include mq(md) {
+        display: flex;
+        width: 6.7rem;
+        height: 3.2rem;
+        margin-bottom: 4.4rem;
+        margin-left: 2rem;
+      }
+    }
+    .sidebar-link {
+      width: 21.6rem;
+      height: 4.8rem;
+      margin-bottom: 1.2rem;
+      align-items: center;
+      padding: 1.65rem 1.85rem;
+      border-radius: 8px;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      font-weight: 400;
+      letter-spacing: -0.1rem;
+      color: $dark-grey;
+      display: flex;
+      cursor: pointer;
+      svg {
+        fill: #b9c8d4;
+        margin-right: 2.5rem;
+      }
+      @include on-event {
+        & {
+          background-color: $blue;
+          color: $white;
+        }
+        svg {
+          fill: $white;
+        }
+      }
+      &.active {
+        & {
+          background-color: $blue;
+          color: $white;
+        }
+        svg {
+          fill: $white;
+        }
+      }
+    }
+  }
+}

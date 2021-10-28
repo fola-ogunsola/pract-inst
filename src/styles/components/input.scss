@@ -1,0 +1,93 @@
+%text {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+.select {
+  position: relative;
+}
+textarea.form__input {
+  line-height: 150%;
+}
+.form{
+  &__label {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: $dark-grey;
+  }
+  &__input {
+    margin-bottom: 2.4rem;
+    margin-top: 0.8rem;
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: $dark;
+    padding: 1.5rem 1.6rem;
+    background: $grey;
+    border: 1px solid $grey;
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+    option[value=""],
+    &::placeholder,
+    &--light {
+      color: #9DA9B3;
+    }
+    &:focus,
+    &:focus-within {
+      border-color: $blue;
+      outline: none;
+      color: $dark;
+      + .form__helper {
+        display: block;
+      }
+    }
+    &--error {
+      border-color: $red !important;
+      margin-bottom: 0.8rem;
+      + .form__helper {
+        transform: translateY(0);
+      }
+    }
+    &[type="password"] {
+      padding-right: 4rem;
+    }
+    &__icon {
+      position: absolute;
+      cursor: pointer;
+      transform: translateX(-4rem) translateY(2.2rem);
+      @include when-inside('.select') {
+        transform: translateX(-4rem) translateY(1.9rem);
+      }
+    }
+    @include when-inside('.select') {
+      padding-right: 4rem;
+    }
+    @include when-inside('.email-verification') {
+      text-align: center;
+      margin-bottom: 3.2rem;
+    }
+  }
+  &__error {
+    color: $red;
+    @extend %text;
+    + .form__helper {
+      transform: translateY(0);
+      display: block;
+    }
+    &__wrapper {
+      position: absolute;
+      bottom: 0;
+      ~ .form__input {
+        border-color: $red !important;
+        margin-bottom: 3.2rem;
+      }
+    }
+  }
+  &__helper {
+    color: $dark-grey;
+    display: none;
+    transform: translateY(-1.6rem);
+    @extend %text;
+  }
+}
