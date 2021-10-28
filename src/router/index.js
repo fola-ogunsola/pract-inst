@@ -7,6 +7,8 @@ import ForgotPassword from '../views/Auth/ForgotPassword'
 import Account from '../views/Dashboard/Account'
 import Dashboard from '../layouts/Dashboard.vue'
 import Demo from '../views/Dashboard/Demo'
+import DashboardHome from '../views/Dashboard/Home'
+import SingleDemo from '../views/Dashboard/SingleDemo'
 
 Vue.use(VueRouter)
 
@@ -19,31 +21,62 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: Login
+    component: Login,
+    meta: {
+      noAuth: true
+    }
   },
   {
     path: '/reset-password',
     name: 'ResetPassword',
-    component: ResetPassword
+    component: ResetPassword,
+    meta: {
+      noAuth: true
+    }
   },
   {
     path: '/forgot-password',
     name: 'ForgotPassword',
-    component: ForgotPassword
+    component: ForgotPassword,
+    meta: {
+      noAuth: true
+    }
   }, 
   {
     path: '/dashboard',
     component: Dashboard,
     children: [
       {
+        path: '',
+        name: 'Dashboard',
+        component: DashboardHome,
+        meta: {
+          requiresAuth: true
+        }
+      },
+      {
         path: 'account',
         name: 'Account',
-        component: Account
+        component: Account,
+        meta: {
+          requiresAuth: true
+        }
       },
       {
         path: 'demo',
         name: 'Demo',
-        component: Demo
+        component: Demo,
+        meta: {
+          requiresAuth: true
+        }
+      },
+      {
+        path: 'demo/:id',
+        name: 'SingleDemo',
+        component: SingleDemo,
+        meta: {
+          requiresAuth: true
+        }
       }
     ]
   }

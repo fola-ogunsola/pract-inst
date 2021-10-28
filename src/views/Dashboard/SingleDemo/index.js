@@ -1,3 +1,3 @@
-import AdminSingleSupport from "./SingleSupport.vue";
+import AdminSingleDemo from "./SingleDemo.vue";
 
-export default AdminSingleSupport;
+export default AdminSingleDemo;

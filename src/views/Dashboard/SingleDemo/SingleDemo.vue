@@ -1,5 +1,5 @@
 <template>
-  <div class="single-support">
+  <div class="single-demo">
     <div class="dashboard__title-container">
       <h1 class="dashboard__title">
         <button @click="$router.go(-1)" class="arrow-btn">
@@ -22,32 +22,33 @@
         Back
       </h1>
     </div>
-    <div :data="singleSupport" class="single-support-content">
-      <p class="single-support-content-subject">
-        {{ singleSupport.emailSubject }}
+    <div :data="singleDemo" class="single-demo-content">
+      <p class="single-demo-content-subject">
+        Demo Request
       </p>
-      <div class="single-support-content-profile-content">
-        <div class="single-support-content-profile-content-header">
+      <div class="single-demo-content-profile-content">
+        <div class="single-demo-content-profile-content-header">
           <div class="profile-avatar">
             <img src="@/assets/images/email-avatar.svg" alt="" />
           </div>
           <div class="profile-details">
             <p class="name">
-              Adaeze Nzekwe <span class="support-email"> instrail@support.com></span>
+              {{singleDemo.fullName}} <span class="demo-email"> {{singleDemo.email}}></span>
             </p>
             <p class="email-receiver">to me</p>
           </div>
         </div>
-        <div class="single-support-content-profile-content-date">
-          <p>{{ singleSupport.createdAt | formatDate }}</p>
+        <div class="single-demo-content-profile-content-date">
+          <p>{{ singleDemo.createdAt | formatDate }}</p>
         </div>
       </div>
-      <div class="single-support-content-message-content">
+      <div class="single-demo-content-message-content">
         <p class="message-text">
-          {{ singleSupport.emailBody }}
+          {{ singleDemo.message }}
         </p>
       </div>
-      <div class="single-support-content-reply-links">
+      <i-button @click="updateDemo" class="my-2 ml-5" v-if="singleDemo && singleDemo.status !== 'new'" :loading="isLoading">Approve Request</i-button>
+      <div class="single-demo-content-reply-links">
         <p>
           <a :href="reply">
             <svg
@@ -86,8 +87,8 @@
 </template>
 
 <script>
-import AdminSingleSupport from "./SingleSupport";
-export default AdminSingleSupport;
+import AdminSingleDemo from "./SingleDemo.js";
+export default AdminSingleDemo;
 </script>
 
-<style lang="scss" scoped src="./SingleSupport.scss"></style>
+<style lang="scss" scoped src="./SingleDemo.scss"></style>

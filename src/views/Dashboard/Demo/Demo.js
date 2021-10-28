@@ -3,7 +3,7 @@ import { mapGetters, mapActions } from "vuex";
 
 
 export default {
-  name: "AdminSupport",
+  name: "AdminDemo",
   components: {
     ITable,
     IPagination,
@@ -11,19 +11,23 @@ export default {
   },
   data: () => ({
     isLoading: false,
-    supportPage: 1,
-    supportCount: 0,
-    supportTotalPages: 1,
+    demoPage: 1,
+    demoCount: 0,
+    demoTotalPages: 1,
     searchKeyword: "",
     commHeaders: [
       {
         name: "From",
-        value: "email"
+        value: "fullName"
       },
       {
         name: "Message",
-        value: "emailBody",
+        value: "message",
         filter: "limit"
+      },
+      {
+        name: "Phone Number",
+        value: "phoneNumber"
       },
       {
         name: "Status",
@@ -38,51 +42,51 @@ export default {
     options: [
       {
         value: "view",
-        label: "View"
+        label: "View request"
       },
       {
-        value: "delete",
-        label: "Delete message"
+        value: "approve",
+        label: "Approve request"
       }
     ]
   }),
   mounted() {
-    this.getAllSupport();
+    this.getAllDemo();
   },
 
   computed: {
     ...mapGetters({
-      support: "admin/getSupport"
+      demo: "demo/getAllDemoRequests"
     })
   },
   watch: {
-    supportPage(value) {
+    demoPage(value) {
       if (value) {
-        this.getAllSupport(value);
+        this.getAllDemo(value);
       }
     },
     searchKeyword(val) {
       if (!val) {
-        this.getAllSupport(1);
+        this.getAllDemo(1);
       }
     }
   },
   methods: {
     ...mapActions({
-      fetchSupport: "admin/fetchSupport",
-      deleteSupport: "admin/deleteSupport"
+      fetchDemo: "demo/fetchAllDemoRequests",
+      approveDemo: "demo/approveDemo"
     }),
-    async getAllSupport(page = 1) {
+    async getAllDemo(page = 1) {
       const { searchKeyword } = this;
       this.isLoading = true;
       try {
-        const supportFetched = await this.fetchSupport({ page, searchKeyword });
-        if (!supportFetched.error) {
-          this.supportPage = Number(supportFetched.currentPage);
-          this.supportTotalPages = supportFetched.totalPages;
-          this.supportCount = supportFetched.total;
+        const demoFetched = await this.fetchDemo({ page, searchKeyword });
+        if (!demoFetched.error) {
+          this.demoPage = Number(demoFetched.currentPage);
+          this.demoTotalPages = demoFetched.totalPages;
+          this.demoCount = demoFetched.total;
         } else {
-          throw Error(supportFetched.error);
+          throw Error(demoFetched.error);
         }
         this.isLoading = false;
       } catch (error) {
@@ -93,19 +97,19 @@ export default {
         });
       }
     },
-    async removeSingleSupport(id) {
+    async updateDemo(id) {
       try {
-        const isRemoved = await this.deleteSupport(id);
-        if (!isRemoved.error) {
+        const isUpdated = await this.approveDemo(id);
+        if (!isUpdated.error) {
           this.$toast.show({
-            message: isRemoved,
+            message: 'Demo approved successfully',
             type: "success",
             fade: 3000
           });
-          this.getAllSupport(this.supportPage);
-          return isRemoved;
+          this.getAllDemo(this.demoPage);
+          return isUpdated;
         } else {
-          throw Error(isRemoved.error);
+          throw Error(isUpdated.error);
         }
       } catch (error) {
         this.$toast.show({
@@ -120,10 +124,10 @@ export default {
       if (typeof action === "string") {
         switch (action) {
           case "view":
-            this.$router.push({ name: "SingleSupport", params: { id: item.id } });
+            this.$router.push({ name: "SingleDemo", params: { id: item.id } });
             break;
-          case "delete":
-            return this.removeSingleSupport(item.id);
+          case "approve":
+            return this.updateDemo(item.id);
         }
       }
     }

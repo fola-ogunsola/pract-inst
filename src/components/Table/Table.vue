@@ -9,7 +9,7 @@
             :id="value"
             v-for="({ name, value }, index) in tableHeaders"
             :key="value">
-            <input type="checkbox" name="item" :id="`selecteAll${name}`" v-model="checkAll" @click="selectAll" v-show="isAdmin && index === 0">
+            <input type="checkbox" name="item" :id="`selecteAll${name}`" v-model="checkAll" @click="selectAll" v-show="(isAdmin && !isDemo) && index === 0">
             {{ name }}
           </th>
         </thead>
@@ -27,6 +27,7 @@
                     :name="`select-${name}`"
                     :id="`select-${name}-${item.id}`"
                     :value="item.id"
+                    v-if="!isDemo"
                     v-model="itemsChecked">
                   <div class="table__image" v-if="showImage">
                     <img :src="item.imageUrl" :alt="item.name" v-if="item.imageUrl">
@@ -48,23 +49,6 @@
         </tbody>
       </table>
       <i-empty-state :message="emptyMessage" v-if="!loading && data && data.length === 0" />
-      <!-- <i-modal v-if="!isAdmin && showDetails" @close="closeModal">
-        <template v-slot:header>
-          <h3>{{name}} Details</h3>
-        </template>
-        <template>
-          <div class="table__details">
-            <div class="table__details-item" v-for="key in Object.keys(selectedItem)" :key="key">
-              <p class="title">
-                {{key | filterKey}}
-              </p>
-              <span class="value" :data-status="key === 'status' && selectedItem[key]">
-                {{selectedItem[key]}}
-              </span>
-            </div>
-          </div>
-        </template>
-      </i-modal> -->
     </div>
   </div>
 </template>

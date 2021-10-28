@@ -36,6 +36,10 @@ export default {
       type: Boolean,
       default: false
     },
+    isDemo: {
+      type: Boolean,
+      default: false
+    },
     actions: {
       default: () => ([])
     },
@@ -92,7 +96,7 @@ export default {
           case "name":
             return `${item.firstName} ${item.lastName}`;
           case "limit":
-            return value.length > 70 ? `${value.substr(0, 70)} ${'...'}` : value
+            return value.length > 65 ? `${value.substr(0, 65)} ${'...'}` : value
           case "money": 
           return `₦ ${formatter.format(value).toString()}`;
         default:

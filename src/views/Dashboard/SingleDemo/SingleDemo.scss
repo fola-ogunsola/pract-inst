@@ -11,7 +11,7 @@
     margin-right: 3.3rem;
   }
 }
-  .single-support-content {
+  .single-demo-content {
   border: 1px solid #eaedf4;
   border-radius: 0.8rem;
   margin-bottom: 10rem;
@@ -51,7 +51,7 @@
           color: $dark;
           margin-bottom: 0.8rem;
         }
-        .support-email {
+        .demo-email {
           @extend %email-grey-text;
           margin-left: 1.2rem;
         }

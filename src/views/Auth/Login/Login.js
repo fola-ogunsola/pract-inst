@@ -22,7 +22,7 @@ export default {
       try {
         const isLoggedIn = await this.login({user})
         if(!isLoggedIn.error ) {
-          this.$router.push({ name: 'AdminDashboard'})
+          this.$router.push({ name: 'Dashboard'})
         } else {
           throw Error(isLoggedIn.error)
         }

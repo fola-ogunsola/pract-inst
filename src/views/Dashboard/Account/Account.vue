@@ -5,12 +5,8 @@
     </div>
     <div class="account-profile-picture">
       <div class="image-rounded">
-        <img :src="user.imageUrl ? user.imageUrl :  '/profile-pic.png'" :alt="user.firstName" />
+        <img src="/profile-pic.png" :alt="user.firstName" />
       </div>
-      <button class="image-btn">
-        Upload{{isUploading ? 'ing' : ''}} Image
-        <input type="file" name="something" id="image-upload" accept="image/*" @change="uploadImage($event)" />
-      </button>
     </div>
     <div class="account-form">
       <i-form ref="updateProfile" @submit="updateMyProfile">
@@ -32,25 +28,15 @@
             placeholder="Last Name"
           />
         </div>
-        <div id="form_block">
-          <i-input
-            v-model="user.email"
-            label="Email Address"
-            name="email"
-            type="name"
-            rules="required|min:3"
-            disabled
-            placeholder="Email Address"
-          />
-          <i-input
-            v-model="user.phoneNumber"
-            label="Phone No."
-            name="phone number"
-            type="tel"
-            rules="required|min:3"
-            placeholder="Phone number"
-          />
-        </div>
+        <i-input
+          v-model="user.email"
+          label="Email Address"
+          name="email"
+          type="name"
+          rules="required|min:3"
+          disabled
+          placeholder="Email Address"
+        />
         <div class="account-form-buttons">
           <i-button class="cancel-btn" type="ghost" size="small">Cancel</i-button>
           <i-button class="save-changes-btn" type="regular" :loading="isLoading" submit full>Save Changes</i-button>

@@ -1,5 +1,4 @@
 import { mapActions, mapGetters } from "vuex"
-import { uploadFile } from "@/api/upload";
 import { IPasswordReset } from "@/components";
 
 export default {
@@ -22,33 +21,6 @@ export default {
     ...mapActions({
       updateProfile: "auth/updateProfile"
     }),
-    async uploadImage(event) {
-      this.isUploading = true;
-      let form = new FormData();
-      form.append("file", event.target.files[0]);
-      const imageUploaded = await uploadFile(form);
-      this.isUploading = false;
-      if (imageUploaded.status === 200) {
-        const {
-          data: { data }
-        } = imageUploaded;
-        this.user.imageUrl = data.url;
-        this.$toast.show({
-          message: "Image uploaded successfully",
-          type: "success",
-          fade: 5000
-        });
-      } else {
-        const {
-          response: { data }
-        } = imageUploaded;
-        this.$toast.show({
-          message: data.message,
-          fade: 3000,
-          type: "error"
-        });
-      }
-    },
     async profileUpdate({ user, isAdmin }) {
       if (!user.imageUrl) {
         delete user.imageUrl;

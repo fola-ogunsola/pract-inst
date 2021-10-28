@@ -29,3 +29,7 @@ export function updatePassword({ passwords}) {
   const url = 'admin/auth/update-password'
   return api.patch(url, passwords);
 }
+export function updateProfile({ user }) {
+  const url = 'admin'
+  return api.put(url, user);
+}

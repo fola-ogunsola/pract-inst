@@ -1,12 +1,12 @@
 <template>
-  <div class="support">
+  <div class="demo">
     <div class="dashboard__title-container">
-      <h1 class="dashboard__title">Support</h1>
+      <h1 class="dashboard__title">Demo Request</h1>
     </div>
     <div class="search-container">
-      <p class="search-container-title">{{ supportCount }} Messages</p>
+      <p class="search-container-title">{{ demoCount }} Requests</p>
       <div class="search-container-content">
-        <i-search v-model="searchKeyword" @search="getAllSupport" />
+        <i-search v-model="searchKeyword" @search="getAllDemo" />
         <button class="filter-btn">
           Filter
           <span>
@@ -18,20 +18,22 @@
     <div class="table-container">
       <i-table
         @actionCalled="handleAction"
-        :data="support"
+        :data="demo"
         :table-headers="commHeaders"
-        empty-message="No records"
+        empty-message="No Demo requests"
         :actions="options"
+        :loading="isLoading"
         is-admin
+        is-demo
       />
-      <i-pagination v-model="supportPage" :total-pages="supportTotalPages" />
+      <i-pagination v-model="demoPage" :total-pages="demoTotalPages" />
     </div>
   </div>
 </template>
 
 <script>
-import AdminSupport from "./Demo";
-export default AdminSupport;
+import AdminDemo from "./Demo";
+export default AdminDemo;
 </script>
 
 <style lang="scss" scoped src="./Demo.scss"></style>

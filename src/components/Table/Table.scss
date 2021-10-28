@@ -84,13 +84,21 @@
       margin-right: 0.3rem;
     }
   }
-  [data-status="successful"],
+  [data-status="approved"],
   [data-status="active"] {
     @extend %status;
     color: $green;
     &::before {
       border-color: $light-green;
       background: $green;
+    }
+  }
+  [data-status="new"] {
+    @extend %status;
+    color: $blue;
+    &::before {
+      border-color: #DBE6F9;
+      background: $blue;
     }
   }
   [data-status="failed"],

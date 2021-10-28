@@ -3,12 +3,6 @@ import { mapActions } from 'vuex'
 
 export default {
   name: 'PasswordReset',
-  props: {
-    isAdmin: {
-      type: Boolean,
-      default: false
-    }
-  },
   components: {
     IModal
   },
@@ -22,11 +16,11 @@ export default {
       updatePassword: 'auth/changePassword'
     }),
     async changePassword() {
-      const { isAdmin, passwords: { newPassword, oldPassword } } = this
+      const { passwords: { newPassword, oldPassword } } = this
       this.isLoading = true
       try {
         const passwordChanged = 
-          await this.updatePassword({isAdmin, passwords: {newPassword, oldPassword}})
+          await this.updatePassword({ passwords: {newPassword, oldPassword}})
         if (!passwordChanged.error) {
           this.isLoading = false;
           this.showModal = false;
