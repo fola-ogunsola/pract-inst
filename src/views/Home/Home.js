@@ -6,6 +6,7 @@ import Demo from './Demo.vue'
 import Control from './Control.vue'
 import Scale from './Scale.vue'
 import Media from './Media.vue'
+import PageFooter from './Footer.vue'
 export default  {
   name: 'Homepage',
   components: {
@@ -16,7 +17,8 @@ export default  {
     Demo,
     Control,
     Scale,
-    Media
+    Media,
+    PageFooter
   },
   data: () => ({ showNavBG: false }),
   mounted() {

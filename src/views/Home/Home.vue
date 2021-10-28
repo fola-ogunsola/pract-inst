@@ -8,6 +8,7 @@
     <control></control>
     <scale></scale>
     <media></media>
+    <page-footer></page-footer>
   </main>
 </template>
 
