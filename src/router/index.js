@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '../views/Home'
 import Login from '../views/Auth/Login'
 import ResetPassword from '../views/Auth/ResetPassword'
 import ForgotPassword from '../views/Auth/ForgotPassword'

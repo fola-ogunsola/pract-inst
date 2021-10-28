@@ -12,6 +12,7 @@ import IEmptyState from './EmptyState.vue'
 import IDropdown from './Dropdown/Dropdown.vue'
 import IAdminAuth from './AdminAuth/Auth.vue'
 import IPasswordReset from './PasswordReset/PasswordReset.vue'
+import ISearch from './Search/Search.vue'
 
 export {
   IButton,
@@ -27,5 +28,6 @@ export {
   IEmptyState,
   IDropdown,
   IAdminAuth,
-  IPasswordReset
+  IPasswordReset,
+  ISearch
 }
