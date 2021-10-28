@@ -6,7 +6,7 @@
       </div>
 
       <ul class="sidebar-menu">
-        <router-link :to="{ name: 'AdminDashboard' }" exact tag="li" class="sidebar-link">
+        <router-link :to="{ name: 'Dashboard' }" exact tag="li" class="sidebar-link">
           <svg
             width="16"
             height="16"
