@@ -30,7 +30,7 @@
           Dashboard
         </router-link>
 
-        <router-link :to="{ name: 'AdminCustomers' }" exact tag="li" class="sidebar-link">
+        <router-link :to="{ name: 'Customers' }" exact tag="li" class="sidebar-link">
           <svg
             width="16"
             height="16"

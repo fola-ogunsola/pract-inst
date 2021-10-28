@@ -1,7 +1,7 @@
 import api from "./api";
 
 export function getAllDemoRequests({ page, searchKeyword }) {
-  return api.get(`/demo-request?${!searchKeyword ? 'page=' + page +'&' : ''}name=${searchKeyword}`);
+  return api.get(`/demo-request?page=${page}&name=${searchKeyword}`);
 }
 
 export function getSingleDemoRequest(id) {

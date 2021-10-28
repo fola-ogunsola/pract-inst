@@ -9,6 +9,7 @@ import Dashboard from '../layouts/Dashboard.vue'
 import Demo from '../views/Dashboard/Demo'
 import DashboardHome from '../views/Dashboard/Home'
 import SingleDemo from '../views/Dashboard/SingleDemo'
+import Customers  from '../views/Dashboard/Customers'
 
 Vue.use(VueRouter)
 
@@ -74,6 +75,14 @@ const routes = [
         path: 'demo/:id',
         name: 'SingleDemo',
         component: SingleDemo,
+        meta: {
+          requiresAuth: true
+        }
+      },
+      {
+        path: 'customers',
+        name: 'Customers',
+        component: Customers,
         meta: {
           requiresAuth: true
         }

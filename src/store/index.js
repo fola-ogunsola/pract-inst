@@ -5,6 +5,7 @@ import VuexPersistence from 'vuex-persist'
 
 import auth from './modules/auth'
 import demo from './modules/demo'
+import customer from './modules/customer'
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage,
@@ -25,7 +26,8 @@ export default new Vuex.Store({
   },
   modules: {
     auth,
-    demo
+    demo,
+    customer
   },
   plugins: [vuexLocal.plugin]
 })

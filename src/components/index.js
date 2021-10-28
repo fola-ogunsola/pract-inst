@@ -13,6 +13,7 @@ import IDropdown from './Dropdown/Dropdown.vue'
 import IAdminAuth from './AdminAuth/Auth.vue'
 import IPasswordReset from './PasswordReset/PasswordReset.vue'
 import ISearch from './Search/Search.vue'
+import CreateCustomer from './CreateCustomer.vue'
 
 export {
   IButton,
@@ -29,5 +30,6 @@ export {
   IDropdown,
   IAdminAuth,
   IPasswordReset,
-  ISearch
+  ISearch,
+  CreateCustomer
 }
