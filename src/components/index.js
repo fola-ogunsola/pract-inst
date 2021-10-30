@@ -15,6 +15,14 @@ import IPasswordReset from './PasswordReset/PasswordReset.vue'
 import ISearch from './Search/Search.vue'
 import CreateCustomer from './CreateCustomer.vue'
 
+// Website Components
+
+import Navigation from './Website/Navigation.vue'
+import PageFooter from './Website/Footer.vue'
+import PageHeader from './Website/Header.vue'
+import IFaq from './Website/FAQ/faq.vue'
+
+
 export {
   IButton,
   IForm,
@@ -31,5 +39,9 @@ export {
   IAdminAuth,
   IPasswordReset,
   ISearch,
-  CreateCustomer
+  CreateCustomer,
+  PageFooter,
+  Navigation,
+  PageHeader,
+  IFaq
 }

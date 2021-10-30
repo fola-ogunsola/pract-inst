@@ -1,6 +1,5 @@
 <template>
-  <main>
-    <navigation :show-bg="showNavBG"></navigation>
+  <div>
     <page-header></page-header>
     <companies></companies>
     <features></features>
@@ -8,8 +7,7 @@
     <control></control>
     <scale></scale>
     <media></media>
-    <page-footer></page-footer>
-  </main>
+  </div>
 </template>
 
 <script src="./Home.js"></script>
