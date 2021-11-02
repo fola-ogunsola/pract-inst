@@ -16,7 +16,7 @@
           <router-link to="/contact">Contact Us</router-link>
         </li>
         <li class="navigation__menu__item">
-          <button class="navigation__menu__button">
+          <button class="navigation__menu__button" @click="$emit('open')">
             Request a Demo
           </button>
         </li>

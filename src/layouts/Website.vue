@@ -1,20 +1,22 @@
 <template>
   <main>
-    <navigation :show-bg="showNavBG"></navigation>
+    <navigation :show-bg="showNavBG" @open="showModal = true"></navigation>
     <router-view></router-view>
     <page-footer></page-footer>
+    <website-modal v-show="showModal"  @close="showModal = false"></website-modal>
   </main>
 </template>
 
 <script>
-import { Navigation, PageFooter } from '@/components'
+import { Navigation, PageFooter, WebsiteModal } from '@/components'
 export default {
   name: 'WebsiteLayout',
   components: {
     Navigation,
-    PageFooter
+    PageFooter,
+    WebsiteModal
   },
-  data: () => ({ showNavBG: false }),
+  data: () => ({ showNavBG: false, showModal: false }),
   mounted() {
     window.addEventListener('scroll', () => this.handleScroll(), 100);
   },

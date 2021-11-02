@@ -5,7 +5,7 @@
         <h3>Take full control of your insurance business</h3>
         <p>Insurance is simply about protecting what matters most to you and your family.</p>
         <div class="media__actions">
-          <button class="media__actions__button">Request a Demo</button>
+          <button class="media__actions__button" @click="$emit('open')">Request a Demo</button>
             <button class="media__actions__button --white">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                 <circle cx="12" cy="12" r="12" fill="#ECF2FD"/>

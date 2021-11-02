@@ -9,7 +9,7 @@
           Insurance is simply about protecting what matters most to you and your family.
         </h3>
         <div class="hero__cta" ref="cta">
-          <button class="hero__cta__button">Request a Demo</button>
+          <button class="hero__cta__button" @click="$emit('open')">Request a Demo</button>
           <button class="hero__cta__button --white">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
               <circle cx="12" cy="12" r="12" fill="#ECF2FD"/>

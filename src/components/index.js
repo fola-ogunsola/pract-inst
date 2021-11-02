@@ -14,6 +14,7 @@ import IAdminAuth from './AdminAuth/Auth.vue'
 import IPasswordReset from './PasswordReset/PasswordReset.vue'
 import ISearch from './Search/Search.vue'
 import CreateCustomer from './CreateCustomer.vue'
+import ITextArea from './TextArea/TextArea.vue'
 
 // Website Components
 
@@ -21,9 +22,11 @@ import Navigation from './Website/Navigation.vue'
 import PageFooter from './Website/Footer.vue'
 import PageHeader from './Website/Header.vue'
 import IFaq from './Website/FAQ/faq.vue'
+import WebsiteModal from './Website/Modal.vue'
 
 
 export {
+  ITextArea,
   IButton,
   IForm,
   IInput,
@@ -43,5 +46,6 @@ export {
   PageFooter,
   Navigation,
   PageHeader,
-  IFaq
+  IFaq,
+  WebsiteModal
 }
