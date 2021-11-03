@@ -11,3 +11,7 @@ export function getSingleDemoRequest(id) {
 export function updateDemoStatus(id) {
   return api.patch(`/demo-request/${id}`, {status: 'approved'});
 }
+
+export function createDemoRequest(body) {
+  return api.post("/demo-request", body)
+}

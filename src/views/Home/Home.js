@@ -5,6 +5,7 @@ import Demo from './Demo.vue'
 import Control from './Control.vue'
 import Scale from './Scale.vue'
 import Media from './Media.vue'
+import { WebsiteModal } from '../../components'
 export default  {
   name: 'Homepage',
   components: {
@@ -14,6 +15,10 @@ export default  {
     Demo,
     Control,
     Scale,
-    Media
-  }
+    Media,
+    WebsiteModal
+  },
+  data: () => ({
+    showModal: false
+  })
 }

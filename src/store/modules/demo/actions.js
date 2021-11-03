@@ -2,7 +2,8 @@
 import {
   getAllDemoRequests,
   getSingleDemoRequest,
-  updateDemoStatus
+  updateDemoStatus,
+  createDemoRequest
 } from "@/api/demo";
 import { errorHandler } from "@/utils/error-handler";
 export default {
@@ -29,5 +30,13 @@ export default {
         return data;
       })
       .catch(response => errorHandler(response));
+  },
+  addDemo: ({ commit }, body) => {
+    return createDemoRequest(body)
+    .then(({ data }) => {
+      const { message } = data
+      return message ;
+    })
+    .catch(response => errorHandler(response));
   }
 };
