@@ -79,3 +79,10 @@
     }
   }
 }
+.filter-dropdown{
+  &__menu {
+    position: absolute;
+    top: 5rem;
+    right: 0.6rem;
+  }
+}

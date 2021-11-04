@@ -18,7 +18,6 @@ export default {
     return addCustomer(body)
       .then(({ data }) => {
         const { message } = data;
-        dispatch('fetchAllCustomers', { page: 1, searchKeyword: ''})
         return message;
       })
       .catch(response => errorHandler(response));

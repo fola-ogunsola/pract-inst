@@ -20,12 +20,17 @@
       <p class="customers-content-heading">{{ customersCount }} Customers</p>
       <div class="customers-content-search">
         <i-search v-model="searchKeyword" @search="getAllCustomers"/>
-        <button @click="showModal = true" class="filter-btn">
-          Filter
-          <span>
-            <img src="@/assets/icons/filter-icon.svg" alt="" />
-          </span>
-        </button>
+        <i-button type="outline" @click="clearFilter" class="clear-filter-btn" v-if="status">
+          Clear Filter
+        </i-button>
+        <i-dropdown :options="actions" v-model="status">
+          <button @click="showDropdown = true" class="filter-btn">
+            Filter
+            <span>
+              <img src="@/assets/icons/filter-icon.svg" alt="" />
+            </span>
+          </button>
+        </i-dropdown>
       </div>
     </div>
     <div class="customers-table-container">

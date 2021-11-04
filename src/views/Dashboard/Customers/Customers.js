@@ -1,4 +1,4 @@
-import { ITable, IPagination, ISearch, CreateCustomer } from "@/components";
+import { ITable, IPagination, ISearch, CreateCustomer, IDropdown } from "@/components";
 import { mapActions, mapGetters } from "vuex";
 
 
@@ -8,7 +8,8 @@ export default {
     ITable,
     IPagination,
     ISearch,
-    CreateCustomer
+    CreateCustomer,
+    IDropdown
   },
   data: () => ({
     isLoading: false,
@@ -17,6 +18,7 @@ export default {
     customersTotalPages: 1,
     searchKeyword: '',
     showCreateModal: false,
+    showDropdown: false,
     customersHeaders: [
       {
         name: "Name",
@@ -55,7 +57,18 @@ export default {
         value: "remove",
         label: "Remove Customer"
       }
-    ]
+    ],
+    actions: [
+      {
+        value: "inactive",
+        label: "Inactive"
+      },
+      {
+        value: "active",
+        label: "Active"
+      },
+    ],
+    status: ''
   }),
 
   mounted() {
@@ -77,17 +90,27 @@ export default {
       if(!val) {
         this.getAllCustomers(1)
       }
+    },
+    showCreateModal(val) {
+      if(val === false) {
+        this.getAllCustomers()
+      }
+    },
+    status(val) {
+      if(typeof val === 'string') {
+        this.getAllCustomers(1, val)
+      }
     }
   },
   methods: {
     ...mapActions({
       fetchCustomers: "customer/fetchAllCustomers"
     }),
-    async getAllCustomers(page = 1) {
+    async getAllCustomers(page = 1, status = '') {
       const { searchKeyword } = this
       this.isLoading = true;
       try {
-        const customersFetched = await this.fetchCustomers({ page, searchKeyword });
+        const customersFetched = await this.fetchCustomers({ page, searchKeyword, status });
         if (!customersFetched.error) {
           this.usersPage = Number(customersFetched.currentPage);
           this.customersTotalPages = customersFetched.totalPages;
@@ -104,6 +127,9 @@ export default {
           fade: 3000
         });
       }
+    },
+    clearFilter() {
+      this.status = ''
     }
   }
 };

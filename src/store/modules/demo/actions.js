@@ -17,9 +17,8 @@ export default {
   },
   fetchSingleDemo: ({ commit }, id) => {
     return getSingleDemoRequest( id)
-      .then(({ data }) => {
-        const { message } = data;
-        return message;
+      .then(({ data: {data} }) => {
+        return data;
       })
       .catch(response => errorHandler(response));
   },

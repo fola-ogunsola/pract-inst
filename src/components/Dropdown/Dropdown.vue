@@ -1,5 +1,5 @@
 <template>
-  <div :class="['dropdown', isTable ? 'dropdown--table': '', form ? 'dropdown--form' : '']">
+  <div :class="['dropdown', isTable ? 'dropdown--table': '', form ? 'dropdown--form' : '', isFilter ? 'filter-dropdown' : '']">
     <button class="dropdown__button" @click="toggleDropdown" type="button">
       <slot>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
@@ -7,7 +7,7 @@
         </svg>
       </slot>
     </button>
-    <div :class="['dropdown__menu', show ? 'show': '']" >
+    <div :class="['dropdown__menu', show ? 'show': '', 'filter-dropdown__menu', show ? 'show' : '']" >
       <ul class="dropdown__list">
         <li class="dropdown__item" v-for="option in options" :key="option.value">
           <input
