@@ -56,6 +56,7 @@ textarea.form__input {
       position: absolute;
       cursor: pointer;
       transform: translateX(-4rem) translateY(2.2rem);
+      pointer-events: none;
       @include when-inside('.select') {
         transform: translateX(-4rem) translateY(1.9rem);
       }

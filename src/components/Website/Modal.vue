@@ -96,7 +96,7 @@ export default {
         if(!demoCreated.error) {
           this.isLoading = false;
           this.$toast.show({
-            message: demoCreated,
+            message: 'Support Created Successfully',
             type: "success",
             fade: 3000
           });
