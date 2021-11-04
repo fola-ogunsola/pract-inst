@@ -14,7 +14,9 @@
       </p>
     </div>
   </section>
-  <div class="scale__media"></div>
+  <div class="scale__media">
+    <img src="../../assets/images/scale.png" alt="">
+  </div>
 </div>
 </template>
 
@@ -35,6 +37,7 @@
     }
   }
   &__text {
+
     h3 {
       color: #1E3A8A;
       font-size: 3.4rem;
@@ -65,13 +68,22 @@
   &__media {
     width: 80rem;
     height: 54rem;
-    box-shadow: 0 6px 18px rgba(14, 52, 126, 0.22);
+    overflow: hidden;
+    padding: 6.3rem  0 0 5.8rem;
+    // box-shadow: 0 6px 18px rgba(14, 52, 126, 0.22);
+    background: $blue;
     border-radius: 2rem;
     position: absolute;
     top: 10rem;
     right: -12rem;
+
     @include mq-up('lg') {
       display: none;
+    }
+
+    @media screen and (min-width: 1081px) and (max-width: 1181px) {
+      max-width: 95%;
+      right: -23vw;
     }
   }
 }
