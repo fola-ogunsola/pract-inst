@@ -13,7 +13,7 @@ export default {
         delete data.token;
         commit("SET_USER", data);
         return user;
-      }).catch(response => errorHandler(response));
+      }).catch(response => errorHandler(response, true));
   },
 
   forgotPassword: ({ }, body) => {

@@ -86,6 +86,7 @@ export default {
           })
           this.customer = {}
           this.$refs.createCustomer.$children[0].reset()
+          this.$emit('close')
         } else {
           throw Error(customerCreated.error)
         }

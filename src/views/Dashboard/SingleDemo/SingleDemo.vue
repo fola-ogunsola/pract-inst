@@ -47,7 +47,7 @@
           {{ singleDemo.message }}
         </p>
       </div>
-      <i-button @click="updateDemo" class="my-2 ml-5" v-if="singleDemo && singleDemo.status !== 'new'" :loading="isLoading">Approve Request</i-button>
+      <i-button @click="updateDemo" class="my-2 ml-5" v-if="singleDemo && singleDemo.status !== 'approved'" :loading="isLoading">Approve Request</i-button>
       <div class="single-demo-content-reply-links">
         <p>
           <a :href="reply">

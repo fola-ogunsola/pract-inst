@@ -20,6 +20,10 @@ export default {
     form: {
       type: Boolean,
       default: false
+    },
+    isFilter: {
+      type: Boolean,
+      default: false,
     }
   },
   computed: {
