@@ -75,6 +75,7 @@
           Log Out
         </button>
       </div>
+      <div class="overlay" @click="isOpen = false"></div>
     </div>
   </nav>
 </template>

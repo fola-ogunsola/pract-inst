@@ -19,45 +19,6 @@
           <p class="detail">England.</p>
         </div>
       </div>
-      <div class="contact-form">
-        <div>
-          <label class="label" for="">Name <span class="star">*</span></label>
-          <input
-            class="input"
-            type="text"
-            name="Name"
-            id="name"
-            placeholder="Name"/>
-        </div>
-        <div>
-          <label class="label" for="">Email Address <span class="star">*</span></label>
-          <input
-            class="input"
-            type="email"
-            name="email Addredd"
-            id="email"
-            placeholder="Email Address"/>
-        </div>
-        <div>
-          <label class="label" for="">Subject <span class="star">*</span></label>
-          <input
-            class="input"
-            type="text"
-            name="subject"
-            id="subject"
-            placeholder="eg. Facilitator enquiry"/>
-        </div>
-        <div>
-          <label class="label" for="">How can we help you <span class="star">*</span></label>
-          <textarea
-            class="message-input"
-            type="text"
-            name="message"
-            id="message"
-            placeholder="Enter message here">
-          </textarea>
-        </div>
-      </div>
     </div>
   </div>
 </template>

@@ -18,7 +18,7 @@
     <select 
       :id="id"
       :name="name"
-      :ref="inputRef"
+      ref="select"
       :disabled="disabled"
       :readonly="readonly"
       :class="{

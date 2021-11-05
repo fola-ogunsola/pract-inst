@@ -22,6 +22,8 @@
         </li>
       </ul>
     </div>
+    <div class="overlay" v-if="show" @click="show = false"></div>
+
   </div>
 </template>
 
