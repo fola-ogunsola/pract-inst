@@ -17,7 +17,6 @@
             <h4 class="footer__section__header">Company</h4>
             <router-link class="footer__page" to="/">Home</router-link>
             <router-link class="footer__page" to="/faq">FAQ</router-link>
-            <router-link class="footer__page" to="/contact">Contact Us</router-link>
           </div>
           <div class="footer__section">
             <h4 class="footer__section__header">Legal</h4>
