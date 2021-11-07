@@ -13,9 +13,6 @@
           <router-link to="/faq">FAQs</router-link>
         </li>
         <li class="navigation__menu__item">
-          <router-link to="/contact">Contact Us</router-link>
-        </li>
-        <li class="navigation__menu__item">
           <button class="navigation__menu__button" @click="$emit('open')">
             Request a Demo
           </button>
@@ -25,7 +22,7 @@
   </nav>
 </template>
 <script>
-import gsap from 'gsap'
+// import gsap from 'gsap'
 export default {
   data: () => ({
     isOpen: false
@@ -36,11 +33,11 @@ export default {
       default: false
     }
   },
-  mounted() { 
-    const { nav } = this.$refs
-    let tl = gsap.timeline()
-    tl.fromTo(nav, { y: -30, opacity: 0}, { duration: 0.4, y: 0, opacity: 1}) 
-  } 
+  // mounted() { 
+  //   const { nav } = this.$refs
+  //   let tl = gsap.timeline()
+  //   tl.fromTo(nav, { y: -30, opacity: 0}, { duration: 0.4, y: 0, opacity: 1}) 
+  // } 
 }
 </script>
 

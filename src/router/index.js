@@ -11,7 +11,7 @@ import DashboardHome from '../views/Dashboard/Home'
 import SingleDemo from '../views/Dashboard/SingleDemo'
 import Customers  from '../views/Dashboard/Customers'
 import WebsiteLayout from '../layouts/Website.vue'
-import ContactPage from '../views/Contact'
+// import ContactPage from '../views/Contact'
 import Privacy from '../views/Policy.vue'
 import Terms from '../views/Terms.vue'
 import FAQ from '../views/FAQ.vue'
@@ -27,11 +27,6 @@ const routes = [
         path: '',
         name: 'Home',
         component: Home
-      },
-      {
-        path: 'contact',
-        name: 'Contact',
-        component: ContactPage
       },
       {
         path: 'privacy',

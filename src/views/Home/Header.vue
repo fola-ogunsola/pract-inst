@@ -28,19 +28,19 @@
 </template>
 
 <script>
-import gsap from 'gsap'
-export default {
-  mounted() { 
-    const { text, bg, float, cta } = this.$refs
+// import gsap from 'gsap'
+// export default {
+//   mounted() { 
+//     const { text, bg, float, cta } = this.$refs
 
-    let tl = gsap.timeline()
+//     let tl = gsap.timeline()
     
-    tl.fromTo(text, { y: -40, opacity: 0 }, { duration: 1, y: 0, opacity: 1 })
-    .fromTo(bg, { x: 100, opacity: 0}, { duration: 0.5, x: 0, opacity: 1}) 
-    .fromTo(float, { y: 100, opacity: 0}, { duration: 0.3, y: 0, opacity: 1}) 
-    .fromTo(cta, { y: 10, opacity: 0}, { duration: 0.5, y: 0, opacity: 1}) 
-  } 
-}
+//     tl.fromTo(text, { y: -40, opacity: 0 }, { duration: 1, y: 0, opacity: 1 })
+//     .fromTo(bg, { x: 100, opacity: 0}, { duration: 0.5, x: 0, opacity: 1}) 
+//     .fromTo(float, { y: 100, opacity: 0}, { duration: 0.3, y: 0, opacity: 1}) 
+//     .fromTo(cta, { y: 10, opacity: 0}, { duration: 0.5, y: 0, opacity: 1}) 
+//   } 
+// }
 </script>
 
 <style lang="scss" scoped>
