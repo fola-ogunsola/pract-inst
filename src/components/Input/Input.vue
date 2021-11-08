@@ -23,7 +23,7 @@
       @keypress="validateKeyPress"
     >
     <span
-      class="form__input__icon"
+      class="form__input__icon password__icon"
       v-if="type === 'password'"
       @click="inputType = inputType === 'password' ? 'text' : 'password'"
     >

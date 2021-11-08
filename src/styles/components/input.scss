@@ -60,6 +60,10 @@ textarea.form__input {
       @include when-inside('.select') {
         transform: translateX(-4rem) translateY(1.9rem);
       }
+
+      &.password__icon {
+        pointer-events: auto;
+      }
     }
     @include when-inside('.select') {
       padding-right: 4rem;

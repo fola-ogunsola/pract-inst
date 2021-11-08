@@ -84,7 +84,7 @@ export default {
     async getAllDemo(page = 1) {
       this.isLoading = true;
       try {
-        const demoFetched = await this.fetchDemo({ page, searchKeyword: '' });
+        const demoFetched = await this.fetchDemo({ page, searchKeyword: '', status: "" });
         if (!demoFetched.error) {
           this.isLoading = false;
           return true
