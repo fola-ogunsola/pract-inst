@@ -1,4 +1,4 @@
-import { ITable, IPagination, ISearch } from "@/components";
+import { ITable, IPagination, ISearch, IDropdown } from "@/components";
 import { mapGetters, mapActions } from "vuex";
 
 
@@ -7,7 +7,8 @@ export default {
   components: {
     ITable,
     IPagination,
-    ISearch
+    ISearch,
+    IDropdown
   },
   data: () => ({
     isLoading: false,
@@ -48,7 +49,19 @@ export default {
         value: "approve",
         label: "Approve request"
       }
-    ]
+    ],
+    actions: [
+      {
+        value: "new",
+        label: "New"
+      },
+      {
+        value: "approved",
+        label: "Approved"
+      },
+    ],
+    showDropdown: false,
+    status: ''
   }),
   mounted() {
     this.getAllDemo();
@@ -69,6 +82,11 @@ export default {
       if (!val) {
         this.getAllDemo(1);
       }
+    },
+    status(val) {
+      if(typeof val === "string") {
+        this.getAllDemo(1, val);
+      }
     }
   },
   methods: {
@@ -77,10 +95,10 @@ export default {
       approveDemo: "demo/approveDemo"
     }),
     async getAllDemo(page = 1) {
-      const { searchKeyword } = this;
+      const { searchKeyword, status } = this;
       this.isLoading = true;
       try {
-        const demoFetched = await this.fetchDemo({ page, searchKeyword });
+        const demoFetched = await this.fetchDemo({ page, searchKeyword, status });
         if (!demoFetched.error) {
           this.demoPage = Number(demoFetched.currentPage);
           this.demoTotalPages = demoFetched.totalPages;
@@ -130,6 +148,9 @@ export default {
             return this.updateDemo(item.id);
         }
       }
+    },
+    clearFilter() {
+      this.status = '';
     }
   }
 };

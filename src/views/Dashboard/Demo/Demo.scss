@@ -34,3 +34,13 @@
     }
   }
 }
+
+.clear-filter-btn{
+  height: 4rem;
+  margin-left: 1.6rem;
+  @include on-event {
+    background-color: $blue;
+    color: $white;
+    border: none;
+  }
+}
