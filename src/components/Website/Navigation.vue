@@ -5,7 +5,7 @@
       <button class="navigation__mobile" :class="{open: isOpen}" @click="isOpen = !isOpen">
         <span></span>
       </button>
-      <ul class="navigation__menu" :class="{open: isOpen}">
+      <ul class="navigation__menu" :class="{open: isOpen}" @click="isOpen = false">
         <li class="navigation__menu__item">
           <router-link to="/">Home</router-link>
         </li>
