@@ -138,6 +138,8 @@ export default {
   z-index: 10000;
 
   .modal-content {
+    position: absolute;
+    top: 0;
     width: 100%;
     overflow: auto;
     background-color: $white;
