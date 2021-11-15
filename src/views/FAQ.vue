@@ -30,6 +30,10 @@ export default {
   margin: 10rem 0 18rem 0;
   padding: 0 14rem;
 
+  @media (max-width: 768px) {
+    padding: 0 5%;
+  }
+
   .title {
     font-family: Poppins;
     font-weight: 600;
