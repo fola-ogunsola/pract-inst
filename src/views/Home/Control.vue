@@ -9,10 +9,10 @@
         Everything you need for insurance management
       </h4>
       <ul class="control__list">
-        <li class="control__list__item" v-for="n in 4" :key="n">
+        <li class="control__list__item" v-for="item in items" :key="item.title">
           <div>
-            <h5>Flexible Integration</h5>
-            <p>Accusantium des doloremque totam rem eaque ipsa quae ab illo inventore veritatis quasi architecto beatae explicabo que totam.</p>
+            <h5>{{item.title}}</h5>
+            <p>{{item.description}}</p>
           </div>
         </li>
       </ul>
