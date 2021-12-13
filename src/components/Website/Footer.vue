@@ -5,11 +5,12 @@
         <div class="footer__address">
           <img src="@/assets/icons/logo.svg" alt="Instrail">
           <p>
-            4517 Washington Ave. 
-            <br> 
-            Manchester, Kentucky 39495 
+            2nd Floor, Jubilee House, Kuku Hill Circle,
             <br>
-            England.
+            Ga Presbytery Offices,
+            <br>
+            Osu, Accra, Ghana. <br>
+            P. O. BOX OS 568
           </p>
         </div>
         <div class="footer__links">
@@ -25,7 +26,7 @@
           </div>
           <div class="footer__section">
             <h4 class="footer__section__header">Contact Us</h4>
-            <a class="footer__page" href="tel:08182843708">+234 (810) 000 0206</a>
+            <a class="footer__page" href="tel:+233507669270">+233 507 669 270</a>
             <a class="footer__page" href="mailto:mail@enyata.com">info@instrail.com</a>
             <p class="footer__socials">
               <a href="https://facebook.com/enyata.community" class="social" rel="noreferrer noopener">

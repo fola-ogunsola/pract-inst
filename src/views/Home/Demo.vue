@@ -2,7 +2,8 @@
   <div class="section demo">
     <div class="container demo__container">
       <h4 class="demo__header">
-        Focus on your business, while we handle the technology
+        Still not convinced? <br>
+        Watch Instrail in action.
       </h4>
         <div class="demo__media">
           <img src="@/assets/demo.png" alt="">

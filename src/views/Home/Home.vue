@@ -1,7 +1,7 @@
 <template>
   <div>
     <page-header @open="showModal = true"></page-header>
-    <companies></companies>
+    <!-- <companies></companies> -->
     <features></features>
     <demo></demo>
     <control></control>

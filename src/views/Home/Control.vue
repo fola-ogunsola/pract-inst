@@ -6,13 +6,13 @@
     </div>
     <div class="control__text">
       <h4>
-        Take full control of your insurance business
+        Everything you need for insurance management
       </h4>
       <ul class="control__list">
-        <li class="control__list__item" v-for="n in 4" :key="n">
+        <li class="control__list__item" v-for="item in items" :key="item.title">
           <div>
-            <h5>Flexible Integration</h5>
-            <p>Accusantium des doloremque totam rem eaque ipsa quae ab illo inventore veritatis quasi architecto beatae explicabo que totam.</p>
+            <h5>{{item.title}}</h5>
+            <p>{{item.description}}</p>
           </div>
         </li>
       </ul>
@@ -20,6 +20,34 @@
   </div>
 </section>
 </template>
+
+<script>
+export default {
+  name: 'Control',
+  data () {
+    return {
+      items: [
+        {
+          title: 'Agency Management',
+          description: 'Instrail helps you consolidate data in one place. Here, you can run operations from prospect to payment and everything in between.'
+        },
+        {
+        title: 'Customer Relationship Management',
+        description: 'With a detailed history of communication with prospects and new clients, you’ll have much more transparency in managing customer relationships.'
+        },
+        {
+          title: 'Claims Management',
+          description: 'With more control over claims, you maintain an overview of the risks, the costs and you can manage to prevent further claims.'
+        },
+        {
+          title: 'Operations Management',
+          description: 'To make your work more productive, Instrail makes provision for business integration so that operations are optimised.'
+        }
+      ]
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .control {

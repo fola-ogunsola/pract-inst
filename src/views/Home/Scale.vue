@@ -2,15 +2,15 @@
 <div class="scale section">
   <section class="container scale__container">
     <div class="scale__text">
-      <h3>Scale your Insurance business.</h3>
+      <h3>Instrail is here to help you gain control.</h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur vred adipiscing tortor, pellentesque donec deaut accumsan nibh turpis eu massa consectetur adipiscing tortor benelit. 
-        <br><br>
-        Adipiscing tortor, pellentesque donec deaut accumsan nibh turpis pellentesque donec deaut consectetur.
-        <br><br>
-        Lorem ipsum dolor sit amet, consectetur adipi tortor, pellentesque donec deaut accum nibh turpisst eust massa tesque conse facilisis.
-        <br><br>
-        Lorem ipsum dolor sit amet, consectetur vred adipiscing.
+        Instrail is a one-stop shop for insurance management. It offers features for every thing your business needs to run efficiently.
+<br><br>
+From customer relations to claims management, Instrails makes execution easy for insurance companies around the world. By helping business fasttrack performance, we bring efficiency to  the workflow.
+<br><br>
+
+Think of it as an operations caretaker; a platform put in charge of taking care of business so you can focus on more important stuff.
+
       </p>
     </div>
   </section>
