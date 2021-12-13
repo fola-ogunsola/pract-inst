@@ -2,8 +2,8 @@
   <section class="section media">
     <div class="container media__container">
       <div class="media__text">
-        <h3>Take full control of your insurance business</h3>
-        <p>Insurance is simply about protecting what matters most to you and your family.</p>
+        <h3>Now’s the time to take action!</h3>
+        <p>Ready to make the switch for better insurance management? Adopt Instrail today..</p>
         <div class="media__actions">
           <button class="media__actions__button" @click="$emit('open')">Request a Demo</button>
             <button class="media__actions__button --white">

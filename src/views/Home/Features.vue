@@ -2,29 +2,29 @@
   <section class="section">
     <div class="container">
       <h3 class="features__header">
-        Some reasons why we are better than others
+        What makes Instrail the best option for managing insurance?
       </h3>
       <div class="features__grid">
         <div class="features__item">
           <span class="features__icon">
             <img src="@/assets/icons/integration.svg" alt="Easy Integration">
           </span>
-          <h4>Easy Integration</h4>
-          <p>Lorem ipsum dolor sit amert plerusa consectetur vred adipiscing sit deauteir accumsan nibh turpis treu adipiscing tortor benelit.</p>
+          <h4>Integration</h4>
+          <p>Offers structure to your company’s operations; complete with tools and features to help run the business effectively.</p>
         </div>
         <div class="features__item">
           <span class="features__icon">
             <img src="@/assets/icons/customizable.svg" alt="Customizable">
           </span>
-          <h4>Customizable</h4>
-          <p>Lorem ipsum dolor sit amert plerusa   adipiscing sit deauteir accumsan nibh turpis treu consectetur adipiscing tortor accumsan benelit.</p>
+          <h4>Customisation</h4>
+          <p>Ensures that it is designed to accommodate your insurance offerings and manage customer relationships better. </p>
         </div>
         <div class="features__item">
           <span class="features__icon">
             <img src="@/assets/icons/automated.svg" alt="Fully Automated">
           </span>
-          <h4>Fully Automated</h4>
-          <p>Lorem ipsum dolor sit amert plerusa consectetur vred adipiscing sit deauteir accumsan nibh turpis treu adipiscing tortor benelit.</p>
+          <h4>Automation</h4>
+          <p>Creates a seamless experience for you and your customers. All processes are accounted for within the platform and optimised for efficiency.</p>
         </div>
       </div>
     </div>
@@ -38,7 +38,7 @@
     font-size: 4rem;
     line-height: 5.2rem;
     letter-spacing: 1px;
-    max-width: 58rem;
+    max-width: 70rem;
     margin-bottom: 8rem;
     font-family: 'Poppins', serif;
   }

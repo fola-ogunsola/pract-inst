@@ -3,10 +3,10 @@
     <div class="container hero__container">
       <div class="hero__text" ref="text">
         <h1>
-          Our passion is protecting yours.
+          The easy way to manage insurance.
         </h1>
         <h3>
-          Insurance is simply about protecting what matters most to you and your family.
+          Instrail offers comprehensive management solutions to help businesses facilitate insurance operations.
         </h3>
         <div class="hero__cta" ref="cta">
           <button class="hero__cta__button" @click="$emit('open')">Request a Demo</button>
@@ -27,21 +27,6 @@
   </header>
 </template>
 
-<script>
-// import gsap from 'gsap'
-// export default {
-//   mounted() { 
-//     const { text, bg, float, cta } = this.$refs
-
-//     let tl = gsap.timeline()
-    
-//     tl.fromTo(text, { y: -40, opacity: 0 }, { duration: 1, y: 0, opacity: 1 })
-//     .fromTo(bg, { x: 100, opacity: 0}, { duration: 0.5, x: 0, opacity: 1}) 
-//     .fromTo(float, { y: 100, opacity: 0}, { duration: 0.3, y: 0, opacity: 1}) 
-//     .fromTo(cta, { y: 10, opacity: 0}, { duration: 0.5, y: 0, opacity: 1}) 
-//   } 
-// }
-</script>
 
 <style lang="scss" scoped>
 .hero {
@@ -61,7 +46,7 @@
   &__text {
     max-width: 58rem;
     h1 {
-      font-size: 7.2rem;
+      font-size: 7rem;
       font-weight: bold;
       margin-bottom: 2rem;
       line-height: 100%;
