@@ -3,16 +3,16 @@
     <div class="container media__container">
       <div class="media__text">
         <h3>Now’s the time to take action!</h3>
-        <p>Ready to make the switch for better insurance management? Adopt Instrail today..</p>
+        <p>Ready to make the switch for better insurance management? Adopt Instrail today.</p>
         <div class="media__actions">
           <button class="media__actions__button" @click="$emit('open')">Request a Demo</button>
-            <button class="media__actions__button --white">
+            <!-- <button class="media__actions__button --white">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                 <circle cx="12" cy="12" r="12" fill="#ECF2FD"/>
-                <path fill="#0B2253" d="M16.668 12.942c-.052.049-.243.254-.422.425-1.048 1.07-3.785 2.818-5.216 3.353-.217.085-.767.267-1.062.28a1.86 1.86 0 0 1-.805-.183 1.608 1.608 0 0 1-.716-.753c-.09-.219-.23-.875-.23-.887C8.076 14.46 8 13.294 8 12.006c0-1.227.076-2.345.191-3.074.013-.013.154-.827.307-1.106A1.62 1.62 0 0 1 9.918 7h.05c.384.012 1.19.329 1.19.34 1.355.535 4.026 2.199 5.1 3.305 0 0 .303.285.435.462.205.255.307.57.307.887 0 .352-.115.68-.332.948Z"/>
+                <path fill="#0B2253" d="M16.668 12.942c-.052.049-.243.254-.422.425-1.048 1.07-3x.785 2.818-5.216 3.353-.217.085-.767.267-1.062.28a1.86 1.86 0 0 1-.805-.183 1.608 1.608 0 0 1-.716-.753c-.09-.219-.23-.875-.23-.887C8.076 14.46 8 13.294 8 12.006c0-1.227.076-2.345.191-3.074.013-.013.154-.827.307-1.106A1.62 1.62 0 0 1 9.918 7h.05c.384.012 1.19.329 1.19.34 1.355.535 4.026 2.199 5.1 3.305 0 0 .303.285.435.462.205.255.307.57.307.887 0 .352-.115.68-.332.948Z"/>
               </svg>
               Watch Demo
-            </button>
+            </button> -->
         </div>
       </div>
       <img class="media__image" src="../../assets/dashboard.png" alt="">

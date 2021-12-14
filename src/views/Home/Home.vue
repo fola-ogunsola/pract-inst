@@ -3,7 +3,8 @@
     <page-header @open="showModal = true"></page-header>
     <!-- <companies></companies> -->
     <features></features>
-    <demo></demo>
+    <br><br><br>
+    <!-- <demo></demo> -->
     <control></control>
     <scale></scale>
     <media  @open="showModal = true"></media>
